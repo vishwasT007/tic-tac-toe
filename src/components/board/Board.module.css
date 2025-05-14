@@ -1,0 +1,72 @@
+.gridContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  width: 300px; /* Adjust as needed */
+  height: 300px; /* Adjust as needed */
+  margin: 20px auto; /* Center the grid */
+  border: 2px solid #333;
+  padding: 10px;
+}
+
+.gridContainer button {
+  font-size: 2em;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  background-color: #f0f0f0;
+  cursor: pointer;
+  border-right: 2px solid #333;
+}
+
+.gridContainer button:nth-child(3n) {
+  /* Target the last button in each row */
+  border-right: none;
+}
+
+.gridContainer button:nth-child(3n + 1) {
+  border-left: none;
+}
+
+.gridContainer button:nth-child(-n + 6) {
+  border-bottom: 2px solid #333;
+}
+
+.gridContainer button:nth-child(n + 7) {
+  border-bottom: none;
+}
+
+.gridContainer button:active {
+  background-color: #ddd;
+}
+
+.resetButton {
+  position: absolute;
+  top: 60%;
+  padding: 10px 20px;
+  font-size: 1em;
+  cursor: pointer;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+.resetButton:hover {
+  background-color: #45a049;
+}
+
+/* Style for the <p> tag */
+p {
+  position: absolute;
+  top: 170px; /* Adjust as needed to position above the grid */
+  left: 50%;
+  transform: translateX(-70%); /* Center horizontally */
+  font-size: 10em; /* Adjust as needed */
+  font-weight: bold;
+  text-align: center;
+  width: 100%; /* Ensure it spans the width */
+}
